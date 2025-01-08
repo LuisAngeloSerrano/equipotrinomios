@@ -1,57 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
-     <title>Mi primera pagina web (En equipos)</title>
-<header style="background-color: #142d58; color: white; padding: 20px; text-align: center;">
-    <h1>¡Conoce a nuestro equipo!</h1>
-    <p>Somos estudiantes de la Universidad Andina del Cusco</p>
-</header>     
+     <title>Mi Primera Página Web (En Equipos)</title>
      <style>
           body {
                background-color: #1e4382;
                color: white; 
+               font-family: Arial, sans-serif;
+               line-height: 1.8;
+               margin: 0;
+               padding: 0;
+          }
+          header {
+               background-color: #142d58;
+               color: white;
+               padding: 20px;
+               text-align: center;
+               box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          }
+          nav {
+               display: flex;
+               justify-content: center;
+               background-color: #142d58;
+               padding: 10px 0;
+               box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+               position: sticky;
+               top: 0;
+               z-index: 1000;
+          }
+          nav a {
+               color: white;
+               text-decoration: none;
+               margin: 0 15px;
+               font-weight: bold;
+          }
+          nav a:hover {
+               text-decoration: underline;
+          }
+          .team-section {
+               margin: 20px auto;
+               max-width: 800px;
+               padding: 20px;
+               background-color: #254a80;
+               border-radius: 8px;
+               box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+          }
+          .team-member {
+               margin-bottom: 20px;
+               text-align: center;
+          }
+          .team-member img {
+               display: block;
+               margin: 10px auto;
+               max-width: 100%;
+               border-radius: 10px;
+               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+          }
+          .team-member i {
+               display: block;
+               font-size: 24px;
+               margin-top: 10px;
+               color: #ffcc00;
+          }
+          iframe {
+               margin: 20px 0;
+               border: none;
+               display: block;
+               width: 100%;
+               max-width: 560px;
+               height: 315px;
+               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+          }
+          @media (max-width: 600px) {
+               .team-section {
+                    padding: 10px;
                }
+               iframe {
+                    height: 250px;
+               }
+          }
      </style>
 </head>
 <body>
-     <p>Los integrantes de mi equipo son:</p>
-     <p>Gamarra Salinas Adan Jorel Hugo (Derecho)</p>
-     <p>  - Tengo 20 años</p>
-     <p>  - Estoy cursando el noveno semestre</p>
-     <p>  - Hobbie ver series</p>
-     <img src="series.jpeg">
-     <p>Pacheco Cereceda Arely (Derecho)</p>
-     <p>  - Tengo 21 años</p>
-     <p>  - Estoy cursando el noveno semestre</p>
-     <p>  - Hobbie bailar</p>
-     <img src="bailar.jpg">     
-     <p>Serrano Paucarmayta Luis Angelo (Ing. Ambiental)</p>
-     <p>  - Tengo 22 años</p>
-     <p>  - Estoy cursando el decimo semestre</p>
-     <p>  - Hobbie la música</p>  
-     <img src="musica.jpg">       
+
+<nav>
+    <a href="#equipo">Equipo</a>
+    <a href="#videos">Videos</a>
+    <a href="#ubicaciones">Ubicaciones</a>
+</nav>
+
+<header>
+    <h1>¡Conoce a nuestro equipo!</h1>
+    <p>Somos estudiantes de la Universidad Andina del Cusco</p>
+</header>
+
+<div id="equipo" class="team-section">
+     <div class="team-member">
+          <h2>Gamarra Salinas Adan Jorel Hugo (Derecho)</h2>
+          <p>- Tengo 20 años</p>
+          <p>- Estoy cursando el noveno semestre</p>
+          <p>- Hobbie: Ver series</p>
+          <img src="series.jpeg" alt="Hobbie: Ver series">
+          <i>🎬</i>
+     </div>
+
+     <div class="team-member">
+          <h2>Pacheco Cereceda Arely (Derecho)</h2>
+          <p>- Tengo 21 años</p>
+          <p>- Estoy cursando el noveno semestre</p>
+          <p>- Hobbie: Bailar</p>
+          <img src="bailar.jpg" alt="Hobbie: Bailar">
+          <i>💃</i>
+     </div>
+
+     <div class="team-member">
+          <h2>Serrano Paucarmayta Luis Angelo (Ing. Ambiental)</h2>
+          <p>- Tengo 22 años</p>
+          <p>- Estoy cursando el décimo semestre</p>
+          <p>- Hobbie: La música</p>
+          <img src="musica.jpg" alt="Hobbie: La música">
+          <i>🎵</i>
+     </div>
+
      <p>¡Somos estudiantes de la Universidad Andina del Cusco!</p>
-     <img src="universidad.jpg">
-     <img src="cenfoti.jpg">
-<header style="background-color: #142d58; color: white; padding: 20px; text-align: center;">
+     <img src="universidad.jpg" alt="Vista de la Universidad Andina del Cusco" style="margin-top: 15px; border-radius: 8px;">
+     <img src="cenfoti.jpg" alt="Centro de Formación y Tecnología" style="margin-top: 10px; border-radius: 8px;">
+</div>
+
+<header id="videos">
     <h1>Videos</h1>
-</header> 
-     <iframe width="560" height="315" src="https://www.youtube.com/embed/rP6xcv6xVnc?si=KtvGzsfs4e0OWMF9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-     <iframe width="560" height="315" src="https://www.youtube.com/embed/D1m-7FcXTOE?si=1tgsvIXpmGGoHZ_c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<header style="background-color: #142d58; color: white; padding: 20px; text-align: center;">
+</header>
+
+<iframe src="https://www.youtube.com/embed/rP6xcv6xVnc?si=KtvGzsfs4e0OWMF9" title="Video del equipo 1" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/D1m-7FcXTOE?si=1tgsvIXpmGGoHZ_c" title="Video del equipo 2" allowfullscreen></iframe>
+
+<header id="ubicaciones">
     <h1>Ubicaciones</h1>
-</header> 
-     <p>Local Larapa</p>
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.974644833936!2d-71.90648882582674!3d-13.537146871436448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916e7edf8692efd5%3A0xb2151ede7622f88b!2sUniversidad%20Andina%20del%20Cusco!5e0!3m2!1ses!2spe!4v1736170497352!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-     <p>Local Larapa (facultad de derecho)</p>
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.982052584072!2d-71.90624408255613!3d-13.536692399999987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916e7edf7923f835%3A0x7375fab42319bd00!2sFacultad%20de%20Derecho!5e0!3m2!1ses-419!2spe!4v1736170525357!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-     <p>Local Qollana</p>
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15514.8917618907!2d-71.8714722898019!3d-13.552580249217076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916e7e84358adc95%3A0x7886d4ccf8497acb!2sUniversidad%20Andina%20del%20Cusco%20-%20Facultad%20de%20Ciencias%20de%20la%20Salud!5e0!3m2!1ses-419!2spe!4v1736170684374!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-     <p>Local del Ovalo</p>
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62065.70241288669!2d-72.03641586875001!3d-13.529061299999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916dd5e6a34bb269%3A0xfbcaefc591399d9c!2sUniversidad%20Andina%20del%20Cusco!5e0!3m2!1ses!2spe!4v1736170734813!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-     <p>Local de Amauta</p>
-     <iframe src="https://www.google.com/maps/embed?pb=!4v1736170762695!6m8!1m7!1s53Zid05JFZiXryC-dVqidg!2m2!1d-13.52174956349407!2d-71.9648012463576!3f203.8632133094551!4f-0.7141886124431664!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</header>
+
+<div class="team-section">
+     <h2>Local Larapa</h2>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.974644833936!2d-71.90648882582674!3d-13.537146871436448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916e7edf8692efd5%3A0xb2151ede7622f88b!2sUniversidad%20Andina%20del%20Cusco!5e0!3m2!1ses!2spe!4v1736170497352!5m2!1ses!2spe" width="600" height="450" loading="lazy" allowfullscreen></iframe>
+
+     <h2>Local Larapa (Facultad de Derecho)</h2>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.982052584072!2d-71.90624408255613!3d-13.536692399999987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916e7edf7923f835%3A0x7375fab42319bd00!2sFacultad%20de%20Derecho!5e0!3m2!1ses-419!2spe!4v1736170525357!5m2!1ses-419!2spe" width="600" height="450" loading="lazy" allowfullscreen></iframe>
+
+     <h2>Local Qollana</h2>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15514.8917618907!2d-71.8714722898019!3d-13.552580249217076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916e7e84358adc95%3A0x7886d4ccf8497acb!2sUniversidad%20Andina%20del%20Cusco%20-%20Facultad%20de%20Ciencias%20de%20la%20Salud!5e0!3m2!1ses-419!2spe!4v1736170684374!5m2!1ses-419!2spe" width="600" height="450" loading="lazy" allowfullscreen></iframe>
+
+     <h2>Local del Óvalo</h2>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62065.70241288669!2d-72.03641586875001!3d-13.529061299999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916dd5e6a34bb269%3A0xfbcaefc591399d9c!2sUniversidad%20Andina%20del%20Cusco!5e0!3m2!1ses!2spe!4v1736170734813!5m2!1ses-2spe" width="600" height="450" loading="lazy" allowfullscreen></iframe>
+
+     <h2>Local de Amauta</h2>
+     <iframe src="https://www.google.com/maps/embed?pb=!4v1736170762695!6m8!1m7!1s53Zid05JFZiXryC-dVqidg!2m2!1d-13.52174956349407!2d-71.9648012463576!3f203.8632133094551!4f-0.7141886124431664!5f0.7820865974627469" width="600" height="450" loading="lazy" allowfullscreen></iframe>
+</div>
+
 </body>
 </html>
